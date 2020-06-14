@@ -19,7 +19,7 @@ import static junit.framework.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 /**
- * Created by code00000001 on 2020/6/6
+ * @author code00000001 on 2020/6/6
  */
 public class SayHelloToLeaveTest {
     @Test

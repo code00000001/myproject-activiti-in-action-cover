@@ -80,4 +80,7 @@ local.properties
 .scala_dependencies
 .worksheet
 .idea
+.project
+.classpath
+*.eclipse
 

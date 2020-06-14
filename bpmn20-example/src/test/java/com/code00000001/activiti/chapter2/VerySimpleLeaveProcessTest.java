@@ -1,12 +1,10 @@
 package com.code00000001.activiti.chapter2;
 
-import com.sun.org.apache.xpath.internal.operations.Equals;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.repository.ProcessDefinition;
-import org.activiti.engine.repository.ProcessDefinitionQuery;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.junit.Test;
 
@@ -14,7 +12,7 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
 /**
- * Created by code00000001 on 2020/6/6
+ * @author code00000001 on 2020/6/6
  */
 
 public class VerySimpleLeaveProcessTest {
