@@ -83,4 +83,5 @@ local.properties
 .project
 .classpath
 *.eclipse
+*.iml
 

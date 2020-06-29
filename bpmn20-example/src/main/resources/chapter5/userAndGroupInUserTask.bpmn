@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1592125364324" name="" targetNamespace="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema">
-  <process id="userAndGroupInUserTaskTest" isClosed="false" isExecutable="true" name="userAndGroupInUserTask" processType="None">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.kafeitu.me/activiti-in-action" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1592123768199" name="" targetNamespace="http://www.kafeitu.me/activiti-in-action" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="userAndGroupInUserTaskTest" isClosed="false" name="userAndGroupInUserTask" processType="None">
     <startEvent id="startevent1" name="Start"/>
-    <userTask activiti:exclusive="true" id="userAndGroupInUserTask" name="学习用户与组在用户任务中的应用"/>
-    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="userAndGroupInUserTask"/>
+    <userTask activiti:candidateGroups="deptLeader" activiti:exclusive="true" id="studyUserAndGroupInUserTask" name="学习用户与组在用户任务的应用"/>
     <endEvent id="endevent1" name="End"/>
-    <sequenceFlow id="flow2" sourceRef="userAndGroupInUserTask" targetRef="endevent1"/>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="studyUserAndGroupInUserTask"/>
+    <sequenceFlow id="flow2" sourceRef="studyUserAndGroupInUserTask" targetRef="endevent1"/>
   </process>
   <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
     <bpmndi:BPMNPlane bpmnElement="userAndGroupInUserTaskTest">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="Shape-startevent1">
-        <omgdc:Bounds height="32.0" width="32.0" x="100.0" y="220.0"/>
+        <omgdc:Bounds height="32.0" width="32.0" x="10.0" y="90.0"/>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="userAndGroupInUserTask" id="Shape-userAndGroupInUserTask">
-        <omgdc:Bounds height="55.0" width="105.0" x="180.0" y="210.0"/>
+      <bpmndi:BPMNShape bpmnElement="studyUserAndGroupInUserTask" id="Shape-studyUserAndGroupInUserTask">
+        <omgdc:Bounds height="55.0" width="105.0" x="90.0" y="80.0"/>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="55.0" width="105.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent1" id="Shape-endevent1">
-        <omgdc:Bounds height="32.0" width="32.0" x="330.0" y="220.0"/>
+        <omgdc:Bounds height="32.0" width="32.0" x="250.0" y="90.0"/>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1" sourceElement="startevent1" targetElement="userAndGroupInUserTask">
-        <omgdi:waypoint x="132.0" y="236.0"/>
-        <omgdi:waypoint x="180.0" y="237.5"/>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1" sourceElement="startevent1" targetElement="studyUserAndGroupInUserTask">
+        <omgdi:waypoint x="42.0" y="106.0"/>
+        <omgdi:waypoint x="90.0" y="107.5"/>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="-1.0" width="-1.0" x="-1.0" y="-1.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2" sourceElement="userAndGroupInUserTask" targetElement="endevent1">
-        <omgdi:waypoint x="285.0" y="237.5"/>
-        <omgdi:waypoint x="330.0" y="236.0"/>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2" sourceElement="studyUserAndGroupInUserTask" targetElement="endevent1">
+        <omgdi:waypoint x="195.0" y="107.5"/>
+        <omgdi:waypoint x="250.0" y="106.0"/>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="-1.0" width="-1.0" x="-1.0" y="-1.0"/>
         </bpmndi:BPMNLabel>
